@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../../CODE/HTML-and-CSS-for-Complete-Beginners-main"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "LOBUN"
+	}
+}
