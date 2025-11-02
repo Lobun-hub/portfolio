@@ -188,6 +188,16 @@ blockquote {
     width: 80%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+.social-icons a {
+    font-size: 24px;
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.5s ease;
+
+}
+.social-icons a:hover {
+    transform: translateY(-5px);
+}
 form {
     max-width: 500px;
     margin: auto;
@@ -241,42 +251,58 @@ footer {
     text-align: center;
 }
 
-/* RESPONSIVE DESIGN */
-@media(max-width: 768px) {
-    header nav {
-        flex-direction: column;
-        text-align: center;
+nav .fa-bars, nav .fa-xmark {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    nav.logo {
+        font-size: 20px;
     }
     header nav ul {
         flex-direction: column;
-        margin-top: 10px;
+        width: 200px;
     }
-    header nav ul li {
-        margin: 10px 0;
+    
+    nav .fa-bars, nav .fa-xmark {
+        display: block;
+        font-size: 24px;
     }
-    .hero img {
-        width: 120px;
-        height: 120px;
+    nav ul {
+        background: rgb(255, 152, 0);
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+        transition: right 0.5s ease;
     }
+    nav ul li {
+        display: block;
+        margin: 25px 0;
+    }
+    nav ul .fa-xmark, nav ul .fa-bars {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+        display: block;
+}
+nav ul li a {
+    font-size: 18px;
+}
+nav ul li a:hover {
+    background: var(--primary-color);
+    color: white;
 }
 
-/* for mobile phones */
-@media(max-width: 480px) {
-    body {
-        font-size: 14px;
-    }
-    header nav h1 {
-        font-size: 1.2rem;
-    }
-    .hero {
-        padding: 30px 10px;
-    }
-    .hero img {
-        width: 100px;
-        height: 100px;
-    }
-    #about-me, #contact {
-        width: 90%;
-        padding: 20px 10px;
-    }
 }
